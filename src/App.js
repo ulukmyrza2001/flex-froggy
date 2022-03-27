@@ -1,11 +1,11 @@
-import './App.css';
+import FlexBoxFroggy from './components/FlexBoxFroggy/FlexBoxFroggy'
 
 function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+	return (
+		<div>
+			<FlexBoxFroggy />
+		</div>
+	)
 }
 
-export default App;
+export default App
