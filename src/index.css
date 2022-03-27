@@ -1,3 +1,12 @@
+:root{
+  --froggy-green:url(./assets//icons/frog-green.svg);
+  --froggy-yellow:url(./assets//icons/frog-yellow.svg);
+  --froggy-red:url(./assets//icons/frog-red.svg);
+  --lilypad-yellow : url(./assets//icons/lilypad-yellow.svg);
+  --lilypad-red : url(./assets//icons/lilypad-red.svg);
+  --lilypad-green : url(./assets//icons/lilypad-green.svg);
+
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

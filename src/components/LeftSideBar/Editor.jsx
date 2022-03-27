@@ -5,15 +5,17 @@ import { FroggyAction } from '../../store/FroggyLevels'
 
 const Editor = () => {
 	const dispatch = useDispatch()
-  const currentLevel = useSelector(state=>state.froggy.currentLevel)
-  const valueStyle = useSelector(state=>state.froggy.value)
-  const level = useSelector(state=>state.froggy.currentLevels.find(item=>item.level === currentLevel))
+	const currentLevel = useSelector((state) => state.froggy.currentLevel)
+	const valueStyle = useSelector((state) => state.froggy.value)
+	const level = useSelector((state) =>
+		state.froggy.currentLevels.find((item) => item.level === currentLevel),
+	)
 	const [game, setGame] = useState('')
 	const changeStyle = (e) => {
 		setGame(e.target.value)
 		dispatch(FroggyAction.gameStyle(e.target.value))
 	}
-  console.log(valueStyle);
+	console.log(valueStyle)
 	return (
 		<EditorStyled>
 			<DivContent>
@@ -30,17 +32,12 @@ const Editor = () => {
 					value={game}
 					onChange={changeStyle}
 				></TextArea>
-        <Pre> {'}'}</Pre>
+				<Pre> {'}'}</Pre>
 			</DivContent>
-			<Button>Next</Button>
+			<Button isValid={level.isValid}>Next</Button>
 		</EditorStyled>
 	)
 }
-
-
-
-
-
 
 const EditorStyled = styled.div`
 	position: relative;
@@ -77,7 +74,7 @@ const Pre = styled.pre`
 const TextArea = styled.textarea`
 	display: block;
 	width: calc(100% - 16px);
-	height: ${props=>props.height * 24 + 'px'};
+	height: ${(props) => props.height * 24 + 'px'};
 	margin-left: 16px;
 	border: none;
 	font-family: 'Source Code Pro', monospace;
