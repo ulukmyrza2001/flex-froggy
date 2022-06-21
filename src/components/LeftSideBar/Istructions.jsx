@@ -10,11 +10,12 @@ const Instructions = () => {
 	console.log(levels)
 	return (
 		<Div>
-			{levels.map((item) => (
+			{/* {levels.map((item) => (
 				<React.Fragment key={item}>
 					{item.questionDescription}
 				</React.Fragment>
-			))}
+			))} */}
+			{levels[current - 1].questionDescription}
 		</Div>
 	)
 }

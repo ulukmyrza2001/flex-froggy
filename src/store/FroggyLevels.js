@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const init = {
-  currentLevel: 13,
+  currentLevel:1,
   value: '',
   currentLevels: [
     {
